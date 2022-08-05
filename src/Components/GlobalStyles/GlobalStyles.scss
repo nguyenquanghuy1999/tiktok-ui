@@ -1,0 +1,27 @@
+@import "normalize.css";
+
+$primary: #fe2c55;
+$layout_width: 1150px;
+
+:root {
+    --test: blue;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}

@@ -1,0 +1,19 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.container {
+    width: $layout_width;
+    display: flex;
+    height: 1000px;
+}
+
+.content {
+    flex: 1;
+}
