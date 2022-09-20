@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import classNames from "classnames/bind";
 import Header from "./Header"
-import Slidebar from "./Sliderbar"
+import Slidebar from "./Slidebar"
 import styles from "./LayoutDefault.module.scss";
 
 const cx = classNames.bind(styles);
@@ -18,5 +19,9 @@ function LayoutDefault({ children }) {
             </div>
         </div>
     )
+}
+
+LayoutDefault.propTypes = {
+    children: PropTypes.node.isRequired
 }
 export default LayoutDefault;

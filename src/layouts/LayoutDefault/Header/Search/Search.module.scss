@@ -1,0 +1,108 @@
+// search
+.search,
+.search-result {
+    width: 361px;
+    position: relative;
+}
+
+.search {
+height: 46px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    padding-left: 15px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+
+    input {
+        border: none;
+        outline: none;
+        width: 252px;
+        font-size: 16px;
+        font-family: var(--font-family);
+        line-height: 22px;
+        background-color: transparent;
+        caret-color: var(--primary);
+
+    }
+
+
+    // input has value icon search will changes color
+    input:not(:placeholder-shown)~.search-btn {
+        color: rgba(22, 24, 35, 0.75)
+    }
+
+    &:focus-within {
+        border-color: #c7c3c3;
+    }
+}
+
+
+.clear-btn,
+.loading {
+    font-size: 1.6rem;
+    color: rgba(22, 24, 35, 0.34);
+    border: none;
+    left: 280px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.loading {
+    animation: spinner linear 0.8s infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+
+
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    text-align: start;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+
+.search-btn {
+    width: 52px;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 30px;
+        background-color: #d5d6d8;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background: rgba(22, 24, 35, 0.06);
+    }
+
+}

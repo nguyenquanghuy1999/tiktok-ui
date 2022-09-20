@@ -1,0 +1,50 @@
+// menu wrapper
+.menu-list {
+    padding: 8px 0;
+
+    .menu-body {
+        max-height: 450px;
+        overflow-y: auto;
+    
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 0;
+        padding: 10px 16px;
+        display: flex;
+        line-height: 2rem;
+
+        &:hover {
+            background: rgba(22, 24, 35, 0.03);
+        }
+    }
+
+}
+
+
+
+
+// menu header
+.header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: -8px;
+}
+
+.back-btn {
+    height: 100%;
+    width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-menu {
+    font-weight: 600;
+    margin-left: 29px;
+}
+
+.separate {
+    border-top: 1px solid #e0dede;
+}

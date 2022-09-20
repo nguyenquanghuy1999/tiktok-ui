@@ -1,12 +1,13 @@
-import Home from "../Pages/Home";
-import Following from "../Pages/Following";
-import Profile from "../Pages/Profile";
-import { HeaderOnly } from "../Components/Layouts";
+import Home from "../pages/Home"
+import Profile from "../pages/Profile"
+import Following from "../pages/Following"
+import { HeaderOnly } from "../layouts";
+import config from "../config";
 
 const publicRoutes = [
-    { path: "/", component: Home },
-    { path: "/following", component: Following },
-    { path: "/profile", component: Profile, layout: HeaderOnly },
+    { path: config.routes.home, component: Home },
+    { path: config.routes.following, component: Following },
+    { path: config.routes.profileUser, component: Profile, layout: HeaderOnly },
 ];
 
 
