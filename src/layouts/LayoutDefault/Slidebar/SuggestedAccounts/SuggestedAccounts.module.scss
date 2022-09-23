@@ -1,0 +1,122 @@
+.wrapper {
+  padding: 16px 0;
+  border-top: 1px solid #f1f1f2;
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #161823bf;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out 0s;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.avatar {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  margin-left: 11px;
+}
+
+.nickname {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "SofiaPro", sans-serif;
+  color: rgb(22, 24, 35);
+}
+
+.check {
+  width: 14px;
+  height: 14px;
+  color: #20d5ec;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.btn-more {
+  font-size: 1.4rem;
+  color: rgb(254, 44, 85);
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+// preview account
+.preview-account {
+  width: 320px;
+  padding: 20px;
+  color: rgb(22, 24, 35);
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.preview-avatar {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-preview {
+  height: 34px;
+  width: 106px;
+ 
+}
+
+.preview-nickname {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: SofiaPro, sans-serif;
+}
+
+.preview-check {
+  width: 14px;
+  height: 14px;
+  color: rgb(32, 213, 236);
+}
+
+.preview-Name {
+  font-size: 1.4rem;
+  font-family: ProximaNova, sans-serif;
+  margin-top: 3px;
+
+}
+
+.preview-analysic {
+  margin-top: 8px;
+}
+
+.preview-value ~ .preview-value {
+  margin-left: 20px;
+}
+
+.preview-title {
+  color:rgba(22, 24, 35, 0.75);
+  margin-left: 6px;
+}
+

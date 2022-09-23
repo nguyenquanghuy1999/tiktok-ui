@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 import styles from "./Search.module.scss";
 import AccountItem from "../../../../Components/AccountItem"
-import { Wrapper as PopperWrapper } from "../../../../Components/Popper"
+import { default as PopperWrapper } from "../../../../Components/Popper"
 import useDebounce from "../../../../hooks/useDebounce"
 import * as searchServices from "../../../../services/searchService"
 
@@ -49,7 +49,11 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
             const result = await searchServices.search(debounceValue);
-            setSearchResult(result);
+            if (result) {
+                setSearchResult(result)
+            } else {
+                alert("No Response !")
+            }
             setLoading(false);
         }
         fetchApi()
