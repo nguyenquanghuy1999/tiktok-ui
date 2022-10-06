@@ -4,6 +4,8 @@ import config from "../../../config"
 import Menu, { MenuItem } from "./Menu";
 import * as Icons from '../../../Components/Icons'
 import SuggestedAccounts from "./SuggestedAccounts";
+import FollowingAccounts from "./SuggestedAccounts";
+import Footer from "./Footer";
 
 const cx = classNames.bind(styles);
 
@@ -18,7 +20,10 @@ function Slidebar() {
 
             <SuggestedAccounts label={'Suggested accounts'} />
 
-            <SuggestedAccounts label={'Following accounts'} />
+            <FollowingAccounts label={'Following accounts'} />
+
+            <Footer />
+
         </div>
     )
 }

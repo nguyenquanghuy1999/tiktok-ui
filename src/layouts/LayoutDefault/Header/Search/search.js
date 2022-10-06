@@ -1,8 +1,8 @@
+import { useEffect, useRef, useState } from "react";
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tippy from '@tippyjs/react/headless';
 import classNames from "classnames/bind";
-import { useEffect, useRef, useState } from "react";
 
 import styles from "./Search.module.scss";
 import AccountItem from "../../../../Components/AccountItem"

@@ -1,0 +1,29 @@
+.wrapper {
+  border-top: 1px solid #f1f1f2;
+  padding-top: 15px;
+  margin-bottom: 82px;
+}
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  list-style: none;
+  margin: 5px 10px 0 0;
+}
+
+.contact-link,
+.copyright {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(22, 24, 35, 0.5);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 15px;
+}
