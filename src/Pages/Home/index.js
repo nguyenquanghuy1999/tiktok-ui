@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 function Home() {
 
     const [foryou, setForyou] = useState([]);
-    console.log(foryou);
 
     useEffect(() => {
         fetch("http://localhost:3000/for_you")
@@ -18,12 +17,9 @@ function Home() {
 
     return (
         <div className={cx("home-list")}>
-            {foryou.map((data, index) => {
-                return (
-                    <ListForYou key={index} data={data} />
-                )
-            })}
-
+            {foryou.map((data, index) => (
+                <ListForYou key={index} data={data} />
+            ))} 
         </div>
     )
 }

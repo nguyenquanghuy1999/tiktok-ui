@@ -9,11 +9,10 @@ import HeaderMenu from "./HeaderMenu";
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, items = [], hideOnClick = false, onChange = () => { } }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = () => { }     }) {
 
     const [menu, setMenu] = useState([{ data: items }]);
     const current = menu[menu.length - 1];
-
 
     const renderItems = () => current.data.map((item, index) => {
         const isParent = !!item.children;
@@ -26,7 +25,6 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => { } 
 
         }} />;
     });
-
 
     const renderResult = attrs => (
         <div tabIndex="-1" {...attrs}>
@@ -49,7 +47,6 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => { } 
     // handle reset first menu
     const handleReset = () => setMenu(prev => prev.slice(0, 1));
 
-
     return (
         <Tippy
             interactive
@@ -58,6 +55,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => { } 
             hideOnClick={hideOnClick}
             render={renderResult}
             onHide={handleReset}
+
         >
             {children}
         </Tippy>

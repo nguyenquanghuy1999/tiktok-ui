@@ -93,7 +93,6 @@ function Header() {
                     <img src={logo} className={cx('logo')} />
                 </Link>
 
-
                 <Search />
 
                 <div className={cx("action")}>

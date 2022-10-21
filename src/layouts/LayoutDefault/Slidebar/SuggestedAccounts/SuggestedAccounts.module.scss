@@ -85,7 +85,8 @@
 .btn-preview {
   height: 34px;
   width: 106px;
- 
+  display: flex;
+  justify-content: center;
 }
 
 .preview-nickname {
@@ -104,7 +105,6 @@
   font-size: 1.4rem;
   font-family: ProximaNova, sans-serif;
   margin-top: 3px;
-
 }
 
 .preview-analysic {
@@ -116,7 +116,6 @@
 }
 
 .preview-title {
-  color:rgba(22, 24, 35, 0.75);
+  color: rgba(22, 24, 35, 0.75);
   margin-left: 6px;
 }
-

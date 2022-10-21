@@ -10,12 +10,8 @@
   border: 1px solid transparent;
   cursor: pointer;
   user-select: none;
-  display: block;
-
-  + .wrapper {
-    margin-left: 15px;
-  }
-
+  display: flex;
+  align-items: center;
 }
 
 .disable {
