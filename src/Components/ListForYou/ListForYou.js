@@ -199,95 +199,81 @@ function ListForYou({ data }) {
                         <video
                             ref={videoRef}
                             className={cx("video")}
-                            onMouseMove={() => {
-                                videoPlayRef.current.style.display = "block";
-                                videoControlsRef.current.style.justifyContent = "space-between";
-                                controlsProgressVideoRef.current.style.display = "flex";
+                            // onMouseMove={() => {
+                            //     videoPlayRef.current.style.display = "block";
+                            //     videoControlsRef.current.style.justifyContent = "space-between";
+                            //     controlsProgressVideoRef.current.style.display = "flex";
 
-                            }}
-                            onMouseOut={() => {
-                                videoPlayRef.current.style.display = "none";
-                                videoControlsRef.current.style.justifyContent = "flex-end"
-                                controlsProgressVideoRef.current.style.display = "none";
+                            // }}
+                            // onMouseOut={() => {
+                            //     videoPlayRef.current.style.display = "none";
+                            //     videoControlsRef.current.style.justifyContent = "flex-end"
+                            //     controlsProgressVideoRef.current.style.display = "none";
 
-                            }}
+                            // }}
                             onPlay={handleOnPlay}
                             onEnded={() => videoRef.current.play()}
                         >
                             <source src={require(`../../assets/videos/${data.video}`)} type="video/mp4" />
                         </video>
-                        <div className={cx('wrap-controls', { isMuted: isMuted })}>
-                            <div
-                                ref={videoControlsRef}
-                                className={cx('video-controls')}
-                                onMouseMove={() => {
-                                    videoPlayRef.current.style.display = "block";
-                                    videoControlsRef.current.style.justifyContent = "space-between"
-                                    controlsProgressVideoRef.current.style.display = "flex";
-                                }}
-
-                            >
-                                <div
-                                    ref={videoPlayRef}
-                                    className={cx("video-play")}
-                                    onClick={handleVideoPlay}
-                                >
-                                    <FontAwesomeIcon icon={isPlay ? faPlay : faPause} className={cx("play")} />
-                                </div>
-                                <Tippy
-                                    interactive
-                                    hideOnClick={false}
-                                    render={(attrs) => (
-                                        <div className={cx('control-volume')} tabIndex={-1} {...attrs}>
-                                            <div className={cx('wrap-customize-volume')}>
-                                                <input
-                                                    value={initVolumeVideo}
-                                                    className={cx('customize-volume')}
-                                                    type="range"
-                                                    onChange={handleCustomizeVolume}
-                                                />
-                                                <div
-                                                    ref={progressVolumeRef}
-                                                    className={cx('progress-volume')}
-                                                    style={{ height: initVolumeVideo + '%' }}>
-                                                </div>
-                                            </div>
+                        <div
+                            ref={videoPlayRef}
+                            className={cx("video-play")}
+                            onClick={handleVideoPlay}
+                        >
+                            <FontAwesomeIcon icon={isPlay ? faPlay : faPause} className={cx("play")} />
+                        </div>
+                        <Tippy
+                            interactive
+                            hideOnClick={false}
+                            render={(attrs) => (
+                                <div className={cx('control-volume')} tabIndex={-1} {...attrs}>
+                                    <div className={cx('wrap-customize-volume')}>
+                                        <input
+                                            value={initVolumeVideo}
+                                            className={cx('customize-volume')}
+                                            type="range"
+                                            onChange={handleCustomizeVolume}
+                                        />
+                                        <div
+                                            ref={progressVolumeRef}
+                                            className={cx('progress-volume')}
+                                            style={{ height: initVolumeVideo + '%' }}>
                                         </div>
-
-                                    )}
-                                >
-                                    <div
-                                        className={cx("video-sound")}
-                                        onClick={handleVideoSound}
-                                    >
-                                        {isVideoSound && < Icons.VolumeIcon />}
-                                        {isMuted && <Icons.MutedIcon />}
                                     </div>
-                                </Tippy>
+                                </div>
+
+                            )}
+                        >
+                            <div
+                                className={cx("video-sound")}
+                                onClick={handleVideoSound}
+                            >
+                                {isVideoSound && < Icons.VolumeIcon />}
+                                {isMuted && <Icons.MutedIcon />}
                             </div>
-                            <div ref={controlsProgressVideoRef} className={cx('controls-progress-video')}>
-                                <div className={cx('wrap-video-progress')}>
-                                    <input
-                                        value={seekTimesVideo}
-                                        className={cx('video-seek-time')}
-                                        type='range'
-                                        onChange={e => {
-                                            videoProgressRef.current.style.width = e.target.value + '%';
-                                            setSeekTimesVideo(e.target.value);
-                                            // handle when seek
-                                            const seekTime = (videoRef.current.duration / 100) * e.target.value;
-                                            videoRef.current.currentTime = seekTime;
-                                        }}
-                                    />
-                                    <div ref={videoProgressRef} className={cx('video-progress')}></div>
-                                </div>
-                                <div className={cx('times-video')}>
-                                    <span className={cx('current-time-video')}>{currentTime}/</span>
-                                    <span className={cx('duration-video')}>{videoDuration}</span>
-                                </div>
+                        </Tippy>
+                        <div ref={controlsProgressVideoRef} className={cx('controls-progress-video')}>
+                            <div className={cx('wrap-video-progress')}>
+                                <input
+                                    value={seekTimesVideo}
+                                    className={cx('video-seek-time')}
+                                    type='range'
+                                    onChange={e => {
+                                        videoProgressRef.current.style.width = e.target.value + '%';
+                                        setSeekTimesVideo(e.target.value);
+                                        // handle when seek
+                                        const seekTime = (videoRef.current.duration / 100) * e.target.value;
+                                        videoRef.current.currentTime = seekTime;
+                                    }}
+                                />
+                                <div ref={videoProgressRef} className={cx('video-progress')}></div>
+                            </div>
+                            <div className={cx('times-video')}>
+                                <span className={cx('current-time-video')}>{currentTime}/</span>
+                                <span className={cx('duration-video')}>{videoDuration}</span>
                             </div>
                         </div>
-
                     </div>
                     <div className={cx("actions")}>
                         <button
