@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faChevronDown, faCommentDots, faHeart, faMusic, faPause, faPlay, faShare } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames/bind";
 import Tippy from '@tippyjs/react/headless';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import styles from "./ListForYou.module.scss"
 import Button from "../Button"
@@ -38,7 +38,7 @@ function ListForYou({ data }) {
 
     const videoRef = useRef();
     const videoPlayRef = useRef();
-    const videoControlsRef = useRef();
+    const videoSoundRef = useRef();
     const preValueVolume = useRef();
     const progressVolumeRef = useRef();
     const videoProgressRef = useRef();
@@ -50,7 +50,7 @@ function ListForYou({ data }) {
         videoRef.current.volume = initVolumeVideo / 100;
         setIsPlay(false);
 
-        if (isPlay != true) {
+        if (isPlay !== true) {
             videoRef.current.pause();
             setIsPlay(true)
         }
@@ -67,6 +67,7 @@ function ListForYou({ data }) {
                 videoRef.current.volume = 1;
                 setInitVolumeVideo(100);
             }
+
             setIsVideoSound(true);
             setIsMuted(false);
 
@@ -195,24 +196,15 @@ function ListForYou({ data }) {
                     <Link to="#" className={cx("link-music")}>{data.link_music}</Link>
                 </div>
                 <div className={cx("video-and-actions")}>
-                    <div className={cx('video-wrap')}>
+                    <div
+                        className={cx('video-wrap', { isMuted: isMuted })}
+                    >
                         <video
                             ref={videoRef}
                             className={cx("video")}
-                            // onMouseMove={() => {
-                            //     videoPlayRef.current.style.display = "block";
-                            //     videoControlsRef.current.style.justifyContent = "space-between";
-                            //     controlsProgressVideoRef.current.style.display = "flex";
-
-                            // }}
-                            // onMouseOut={() => {
-                            //     videoPlayRef.current.style.display = "none";
-                            //     videoControlsRef.current.style.justifyContent = "flex-end"
-                            //     controlsProgressVideoRef.current.style.display = "none";
-
-                            // }}
                             onPlay={handleOnPlay}
                             onEnded={() => videoRef.current.play()}
+
                         >
                             <source src={require(`../../assets/videos/${data.video}`)} type="video/mp4" />
                         </video>
@@ -246,6 +238,7 @@ function ListForYou({ data }) {
                             )}
                         >
                             <div
+                                ref={videoSoundRef}
                                 className={cx("video-sound")}
                                 onClick={handleVideoSound}
                             >
@@ -253,7 +246,11 @@ function ListForYou({ data }) {
                                 {isMuted && <Icons.MutedIcon />}
                             </div>
                         </Tippy>
-                        <div ref={controlsProgressVideoRef} className={cx('controls-progress-video')}>
+                        <div
+                            ref={controlsProgressVideoRef}
+                            className={cx('controls-progress-video')}
+
+                        >
                             <div className={cx('wrap-video-progress')}>
                                 <input
                                     value={seekTimesVideo}

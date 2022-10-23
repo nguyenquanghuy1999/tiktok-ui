@@ -115,6 +115,39 @@
 
 .video-wrap {
   position: relative;
+
+  &.isMuted {
+    &:hover {
+      .video-sound {
+        animation: none;
+      }
+    }
+
+    &:not(:hover) {
+      .video-sound {
+        display: block;
+      }
+    }
+  }
+
+  // &:not(.isMuted) .video-sound {
+  //   animation: none;
+  // }
+
+  &:hover {
+    .video-play {
+      display: block;
+      animation: showingUp linear 0.5s;
+    }
+    .video-sound {
+      display: block;
+      animation: showingUp linear 0.5s;
+    }
+    .controls-progress-video {
+      display: flex;
+      animation: showingUp linear 0.5s;
+    }
+  }
 }
 
 .video {
@@ -137,16 +170,22 @@
   font-size: 18px;
   color: #fff;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 24px;
+  bottom: 34px;
+  cursor: pointer;
+  padding: 6px;
+  display: none;
 }
 
 .video-sound {
   font-size: 18px;
   color: #fff;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 20px;
+  bottom: 33px;
+  cursor: pointer;
+  padding: 4px;
+  display: none;
 }
 
 .control-volume {
@@ -196,6 +235,7 @@
   bottom: 0;
 }
 
+// progress video
 .controls-progress-video {
   position: absolute;
   bottom: 20px;
@@ -204,6 +244,7 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  display: none;
 }
 
 .wrap-video-progress {
@@ -264,13 +305,11 @@
   font-family: Tahoma, PingFangSC, sans-serif;
 }
 
-
 // actions video
 .actions {
   display: flex;
   flex-direction: column;
   margin-left: 23px;
-  
 }
 
 .btn {
@@ -400,19 +439,6 @@
     }
   }
 }
-.avatar {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.infos {
-  margin-left: 15px;
-  flex: 1;
-}
-
 
 // preview account
 .preview-account {
