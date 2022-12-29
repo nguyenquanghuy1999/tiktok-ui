@@ -20,6 +20,7 @@ const Image = forwardRef(({ src, alt, className, fallback, ...props }, ref) => {
             alt={alt}
             {...props}
             onError={handleError}
+
         />
     );
 });

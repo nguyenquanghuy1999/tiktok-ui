@@ -1,0 +1,44 @@
+
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out 0s;
+  
+    &:hover {
+      background-color: rgba(22, 24, 35, 0.03);
+    }
+  }
+  
+  .avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .info {
+    margin-left: 11px;
+  }
+  
+  .nickname {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "SofiaPro", sans-serif;
+    color: rgb(22, 24, 35);
+  }
+  
+  .check {
+    width: 14px;
+    height: 14px;
+    color: #20d5ec;
+  }
+  
+  .name {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(22, 24, 35, 0.75);
+  }
+  
+  

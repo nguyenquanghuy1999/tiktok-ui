@@ -1,0 +1,79 @@
+.video-item {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  &:hover {
+    .image {
+      display: none;
+    }
+  }
+
+  .image {
+    width: 226px;
+    height: 302px;
+    object-fit: cover;
+    position: absolute;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5%;
+  }
+
+  .video {
+    width: 226px;
+    height: 302px;
+    object-fit: cover;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5%;
+  }
+}
+
+.infos {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.fullname {
+  color: rgba(255, 255, 255, 1);
+  font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 15px;
+}
+
+.nickname {
+  color: rgba(255, 255, 255, 1);
+  font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 3px;
+}
+.check {
+  font-size: 12px;
+  color: rgb(32, 213, 236);
+  margin-left: 5px;
+}
+.btn {
+  min-width: 164px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: SofiaPro, PingFangSC, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  margin-top: 10px;
+}

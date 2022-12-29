@@ -1,1 +1,1 @@
-export { default } from "./HeadeOnly"
+export { default } from "./HeaderOnly"

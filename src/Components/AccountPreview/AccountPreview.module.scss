@@ -1,0 +1,59 @@
+// preview account
+.preview-account {
+  width: 320px;
+  padding: 20px;
+  color: rgb(22, 24, 35);
+  cursor: default;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.preview-avatar {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-preview {
+  height: 34px;
+  width: 106px;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-nickname {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: SofiaPro, sans-serif;
+}
+
+.preview-check {
+  width: 14px;
+  height: 14px;
+  color: rgb(32, 213, 236);
+}
+
+.preview-Name {
+  font-size: 1.4rem;
+  font-family: ProximaNova, sans-serif;
+  margin-top: 3px;
+}
+
+.preview-analysic {
+  margin-top: 8px;
+}
+
+.preview-value ~ .preview-value {
+  margin-left: 20px;
+}
+
+.preview-title {
+  color: rgba(22, 24, 35, 0.75);
+  margin-left: 6px;
+}

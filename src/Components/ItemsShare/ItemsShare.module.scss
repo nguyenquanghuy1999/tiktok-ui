@@ -1,0 +1,36 @@
+.custom-popper {
+  overflow: hidden;
+}
+.list-item-share {
+  max-height: 448px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(212, 209, 209);
+  }
+}
+.popper-btn-share {
+  width: 280px;
+  padding-left: 15px !important;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  &:last-child {
+    margin-bottom: 8px;
+  }
+}
+.btn-more {
+  height: 24px;
+  width: 280px;
+  justify-content: center;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+}

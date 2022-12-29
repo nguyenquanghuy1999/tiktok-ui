@@ -130,10 +130,6 @@
     }
   }
 
-  // &:not(.isMuted) .video-sound {
-  //   animation: none;
-  // }
-
   &:hover {
     .video-play {
       display: block;
@@ -143,7 +139,7 @@
       display: block;
       animation: showingUp linear 0.5s;
     }
-    .controls-progress-video {
+    .controls-progress-video.isShowControlsProgressVideo {
       display: flex;
       animation: showingUp linear 0.5s;
     }
@@ -151,8 +147,6 @@
 }
 
 .video {
-  width: 281px;
-  height: 501px;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -316,46 +310,6 @@
   margin: 6px 0;
   background-color: transparent;
   cursor: pointer;
-}
-
-.popper-btn-share {
-  width: 280px;
-  padding-left: 15px !important;
-
-  &:hover {
-    background-color: #f1f1f1;
-  }
-
-  &:last-child {
-    margin-bottom: 8px;
-  }
-}
-
-.custom-popper {
-  overflow: hidden;
-}
-
-.list-item-share {
-  max-height: 448px;
-  overflow: auto;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgb(212, 209, 209);
-  }
-}
-
-.btn-more {
-  height: 24px;
-  width: 280px;
-  justify-content: center;
-
-  &:hover {
-    background-color: #f1f1f1;
-  }
 }
 
 .wrap-icon {

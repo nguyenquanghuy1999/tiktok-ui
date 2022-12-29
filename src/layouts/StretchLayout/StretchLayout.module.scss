@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  
+  display: flex;
+  margin-top: 60px;
+}
+
+.content {
+  flex: 1;
+}
+
+.actions {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  &.isBtnGoToTop {
+    animation: showBtnGoToTop 0.2s linear 0.2s forwards;
+  }
+}
+
+@keyframes showBtnGoToTop {
+  to {
+    bottom: 50px;
+  }
+}

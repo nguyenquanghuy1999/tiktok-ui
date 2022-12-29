@@ -1,0 +1,93 @@
+.get-app {
+
+  &.isDownApps {
+    .btn-get-app {
+      display: none;
+    }
+
+    .down-apps {
+      display: block;
+      animation: showApps linear 0.3s;
+    }
+  }
+}
+
+@keyframes showApps {
+  from {
+    transform: scale(0);
+    transform-origin: bottom right;
+  }
+  to {
+    transform: scale(1);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes hideApps {
+  from {
+    transform: scale(1);
+    transform-origin: bottom right;
+  }
+  to {
+    transform: scale(0);
+    transform-origin: bottom right;
+  }
+}
+
+.btn-get-app {
+  font-size: 1.4rem;
+  min-width: 90px;
+  height: 32px;
+  color: rgba(22, 24, 35, 0.75);
+  font-family: ProximaNova, sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  animation: showApps linear 0.1s;
+}
+
+.down-apps {
+  width: 274px;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 6%) 0px 2px 8px;
+  border: 1px solid rgba(22, 24, 35, 0.03);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0.14, 0.3, 1) 0s;
+  position: relative;
+  display: none;
+}
+
+.down-app {
+  display: flex;
+  align-items: center;
+  width: 209px;
+  padding: 8px;
+  margin: 7px 0 7px 15px;
+
+  &:first-child {
+    border-bottom: 1px solid #f1f1f2;
+  }
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+    cursor: pointer;
+  }
+}
+
+.down-app-title {
+  font-size: 1.6rem;
+  margin-left: 8px;
+  color: #161823;
+  font-family: ProximaNova, sans-serif;
+  font-weight: 700;
+}
+
+.close-apps {
+  font-size: 18px;
+  color: #36394b;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  padding: 5px;
+}

@@ -1,3 +1,15 @@
 .wrapper {
-    margin-left: var(--margin-left-of-pages)
+  margin-left: var(--margin-left-of-pages);
 }
+
+.inner {
+  margin-top: 45px;
+}
+
+.video-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
